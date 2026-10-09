@@ -1,6 +1,6 @@
 # Blue Collar Blueprint
 
-One-page, mobile-first site for Blue Collar Blueprint, a division of Phoenix Heart AI. Revenue Leak Calculator and audit request form for HVAC contractors.
+One-page, mobile-first site for Blue Collar Blueprint, a division of Phoenix Heart AI. Revenue Leak Calculator and audit request form for contractors and tradespeople (plumbers, electricians, HVAC, roofers, landscapers and similar).
 
 Plain HTML, CSS, and JS. No build step, no dependencies. Fonts load from Google Fonts (Archivo, IBM Plex Sans, IBM Plex Mono).
 
