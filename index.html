@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blue Collar Blueprint | Stop losing HVAC jobs to missed calls</title>
+  <meta name="description" content="Blue Collar Blueprint, a division of Phoenix Heart AI, helps HVAC contractors stop losing jobs to missed calls. Calculate what missed calls cost you and request a free Revenue Leak Audit.">
+  <meta name="theme-color" content="#14110f">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Blue Collar Blueprint, home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-name">Blue Collar Blueprint</span>
+    </a>
+    <a class="bar-link" href="#audit">Free audit</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- 1. HERO -->
+  <section class="hero" id="top">
+    <div class="wrap">
+      <p class="eyebrow">For HVAC contractors</p>
+      <h1>Missed calls cost you jobs. Here&rsquo;s the math.</h1>
+      <p class="lede">A caller who reaches voicemail usually calls the next contractor on the list. Every call you miss is a job you had a chance to book. We close that gap with an instant text-back, so the lead stays with you.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#audit">Get your free Revenue Leak Audit</a>
+        <a class="text-link" href="#calculator">Run the numbers first</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. CALCULATOR -->
+  <section class="section" id="calculator" aria-labelledby="calc-h">
+    <div class="wrap">
+      <p class="eyebrow">Revenue Leak Calculator</p>
+      <h2 id="calc-h">What your missed calls cost</h2>
+      <p class="sub">Enter your own numbers. The result is arithmetic on your inputs, nothing more.</p>
+
+      <div class="calc">
+        <form class="calc-inputs" id="calc-form" novalidate>
+          <div class="field">
+            <label for="calls">Missed calls per week</label>
+            <input id="calls" name="calls" type="number" inputmode="decimal" min="0" step="1" value="10">
+          </div>
+          <div class="field">
+            <label for="close">Close rate (%)</label>
+            <input id="close" name="close" type="number" inputmode="decimal" min="0" max="100" step="1" value="40">
+            <span class="hint">Share of calls you normally turn into booked jobs.</span>
+          </div>
+          <div class="field">
+            <label for="job">Average job value ($)</label>
+            <input id="job" name="job" type="number" inputmode="decimal" min="0" step="50" value="450">
+          </div>
+        </form>
+
+        <div class="calc-output" aria-live="polite">
+          <div class="result">
+            <span class="result-label">Estimated lost revenue / month</span>
+            <output class="result-num" id="out-month" for="calls close job">$0</output>
+          </div>
+          <div class="result result-main">
+            <span class="result-label">Estimated lost revenue / year</span>
+            <output class="result-num" id="out-year" for="calls close job">$0</output>
+          </div>
+        </div>
+
+        <div class="formula">
+          <p class="formula-title">Formula</p>
+          <pre class="formula-code" id="formula-generic">monthly = missed calls/week &times; (52 &divide; 12) &times; close rate &times; avg job value
+yearly  = monthly &times; 12</pre>
+          <p class="formula-title">With your numbers</p>
+          <pre class="formula-code" id="formula-live"></pre>
+          <p class="note">Assumes missed calls would have closed at your normal rate. Real recovery will be lower, since not every caller replies to a text. The audit uses your actual call data to estimate that.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. HOW IT WORKS -->
+  <section class="section section-alt" id="how" aria-labelledby="how-h">
+    <div class="wrap">
+      <p class="eyebrow">How it works</p>
+      <h2 id="how-h">Three steps, no staff time</h2>
+      <ol class="steps">
+        <li>
+          <span class="step-num">01</span>
+          <h3>Missed call</h3>
+          <p>You&rsquo;re on a roof, in an attic, or on another call. The phone rings out.</p>
+        </li>
+        <li>
+          <span class="step-num">02</span>
+          <h3>Instant text-back</h3>
+          <p>Within seconds the caller gets a text from your business number, asking what they need and when.</p>
+        </li>
+        <li>
+          <span class="step-num">03</span>
+          <h3>Booked job</h3>
+          <p>The caller replies, the conversation moves to a time slot, and you get the details to confirm.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 4. AUDIT FORM -->
+  <section class="section" id="audit" aria-labelledby="audit-h">
+    <div class="wrap narrow">
+      <p class="eyebrow">Free Revenue Leak Audit</p>
+      <h2 id="audit-h">Request your audit</h2>
+      <p class="sub">We review your call volume and booking process and send back a written estimate of where jobs are leaking. No charge. No obligation.</p>
+
+      <form class="audit-form" id="audit-form" novalidate>
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="business">Business</label>
+          <input id="business" name="business" type="text" autocomplete="organization" required>
+        </div>
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" inputmode="email" autocomplete="email" required>
+        </div>
+
+        <!-- Honeypot: real users never see or fill this. -->
+        <div class="hp" aria-hidden="true">
+          <label for="website">Leave this field empty</label>
+          <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+        </div>
+
+        <input type="hidden" name="calc_missed_calls_per_week" id="h-calls">
+        <input type="hidden" name="calc_close_rate_pct" id="h-close">
+        <input type="hidden" name="calc_avg_job_value" id="h-job">
+        <input type="hidden" name="calc_est_monthly_loss" id="h-month">
+        <input type="hidden" name="calc_est_yearly_loss" id="h-year">
+
+        <button class="btn btn-block" type="submit" id="submit-btn">Request my free audit</button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        <p class="note">We use your details only to deliver the audit and follow up about it.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- 5. FAQ -->
+  <section class="section section-alt" id="faq" aria-labelledby="faq-h">
+    <div class="wrap narrow">
+      <p class="eyebrow">FAQ</p>
+      <h2 id="faq-h">Short answers</h2>
+
+      <details>
+        <summary>What is the Revenue Leak Audit?</summary>
+        <p>A written review of how many calls you miss, what they likely cost, and where in your intake process jobs are slipping. It is free.</p>
+      </details>
+      <details>
+        <summary>Do I need new software or a new phone number?</summary>
+        <p>The audit does not require either. What setup looks like for the text-back system depends on your phone provider, and we cover that in the audit.</p>
+      </details>
+      <details>
+        <summary>Will customers know it&rsquo;s automated?</summary>
+        <p>The first text is automated and says so plainly. You or your staff take over once the caller replies with a job.</p>
+      </details>
+      <details>
+        <summary>How accurate is the calculator?</summary>
+        <p>It is a ceiling, not a forecast. It assumes every missed call would have closed at your normal rate. Actual recovery will be lower. The audit replaces those assumptions with your real numbers.</p>
+      </details>
+      <details>
+        <summary>Who runs this?</summary>
+        <p>Blue Collar Blueprint is a division of Phoenix Heart AI.</p>
+      </details>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p><strong>Blue Collar Blueprint</strong> &middot; a division of Phoenix Heart AI</p>
+    <p class="fine">&copy; <span id="year"></span> Phoenix Heart AI. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
