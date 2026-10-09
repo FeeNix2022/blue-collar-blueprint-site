@@ -1,7 +1,7 @@
 // Where the audit form posts. Swap this for your endpoint (Formspree, Basin,
 // Google Apps Script web app, your own API, etc.).
-// Empty string = form is not wired up yet; submissions are NOT sent anywhere.
-const FORM_ENDPOINT = "";
+// Empty string = form is not wired up; submissions are NOT sent anywhere.
+const FORM_ENDPOINT = "https://formspree.io/f/xdeazoav";
 
 (function () {
   "use strict";
